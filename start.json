@@ -1,0 +1,16 @@
+{
+  "name": "Mi Primer Servidor MSX",
+  "version": "1.0.0",
+  "items": [
+    {
+      "title": "PlutoTV",
+      "icon": "41+C5TFE3kL.png",
+      "action": "link:https://pluto.tv/latam/home/"
+    },
+    {
+      "title": "CineCalidad",
+      "icon": "unnamed.jpg",
+      "action": "link:https://sololatino.net/"
+    },
+  ]
+}
