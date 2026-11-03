@@ -370,7 +370,7 @@
       let surfaceRadius = Math.max(modelRadius, 0.05);
 
       if (modelIndex === 6) {
-        surfaceRadius = Math.max(modelRadius * 0.53, 0.05);
+        surfaceRadius = Math.max(modelRadius * 0.52, 0.05);
       }
 
       const position = randomDirection.clone().multiplyScalar(surfaceRadius);
@@ -468,6 +468,7 @@
         }
       );
 
+      displayRoot.renderOrder = 80;
       mainModelGroup.add(displayRoot);
     }
 
@@ -489,6 +490,7 @@
 
     // --- 5. 画面下の8つの小球体（3D UI） ---
     const uiGroup = new THREE.Group();
+    uiGroup.renderOrder = 100;
 
     const originalDistance = 4.5;
     const safeDistance = 0.5;
@@ -508,6 +510,7 @@
 
     for (let i = 0; i < uiPlanetCount; i++) {
       const uiBtnGroup = new THREE.Group();
+      uiBtnGroup.renderOrder = i === 6 ? 90 : 110;
       
       const angle = uiStartAngle + i * uiAngleStep;
       uiBtnGroup.position.x = Math.sin(angle) * arcRadius;
@@ -719,4 +722,4 @@
     });
   </script>
 </body>
-</html>
+</html></html>
