@@ -499,9 +499,10 @@
     const safeDistance = 0.5;
     const uiScale = safeDistance / originalDistance;
 
-    // ★修正: 計算式の構文エラーを修正
+    // 構文エラーを修正しました
     uiGroup.position.set(0, -1.0 * uiScale, -safeDistance);
     uiGroup.scale.set(uiScale * 0.7, uiScale * 0.7, uiScale * 0.7);
+    
     camera.add(uiGroup);
 
     const uiButtonRadius = 0.14;
@@ -509,16 +510,23 @@
     const uiPlanetCount = 9;
     const uiSpread = 1.15;
     const uiStartAngle = -uiSpread / 2;
-    const uiAngleStep = uiSpread / (uiPlanetCount - 1); // ★修正: 構文エラーを修正
+    // 構文エラーを修正しました
+    const uiAngleStep = uiSpread / (uiPlanetCount - 1); 
 
     for (let i = 0; i < uiPlanetCount; i++) {
       const uiBtnGroup = new THREE.Group();
-      uiBtnGroup.renderOrder = i === 6 ? 90 : 110;
+      uiBtnGroup.renderOrder = i === 6 ? 70 : 120;
+      
+      // 土星(i===6)のZ位置を深く下げて他の惑星の後ろに配置し、
+      // 遠のいた分の透視投影によるズレ（位置とサイズ）を補正する。
+      const isSaturn = (i === 6);
+      const zOffset = isSaturn ? -4.5 : 0.22;
+      const perspectiveRatio = isSaturn ? 1.63 : 1.0; 
       
       const angle = uiStartAngle + i * uiAngleStep;
-      uiBtnGroup.position.x = Math.sin(angle) * arcRadius;
-      uiBtnGroup.position.y = (1 - Math.cos(angle)) * arcRadius;
-      uiBtnGroup.position.z = 0;
+      uiBtnGroup.position.x = Math.sin(angle) * arcRadius * perspectiveRatio;
+      uiBtnGroup.position.y = (1 - Math.cos(angle)) * arcRadius * perspectiveRatio;
+      uiBtnGroup.position.z = zOffset;
       
       uiBtnGroup.userData.isUIButton = true;
       uiBtnGroup.userData.modelIndex = i;
@@ -539,7 +547,10 @@
         const maxDim = Math.max(size.x, size.y, size.z);
 
         const baseScale = (uiButtonRadius * 1.8) / maxDim;
-        const scale = i === 6 ? baseScale * 1.8 : baseScale;
+        // 土星は元の1.8倍に加えて、奥に下げた分の補正(perspectiveRatio)を掛ける
+        const scaleMult = isSaturn ? 1.8 * perspectiveRatio : 1.0;
+        const scale = baseScale * scaleMult;
+        
         uiModel.scale.set(scale, scale, scale);
         uiModel.position.sub(center.multiplyScalar(scale));
 
@@ -570,7 +581,7 @@
       const ptr = getPointerPosition(event);
       raycaster.setFromCamera(ptr, camera);
 
-      // ★修正: UIとメインモデル全体を判定対象にする
+      // UIとメインモデル全体を判定対象にする
       const intersects = raycaster.intersectObjects([uiGroup, mainModelGroup], true);
       if (intersects.length === 0) return;
 
@@ -596,7 +607,7 @@
         boardText.innerHTML = data.text;
         infoBoard.style.display = 'block';
 
-        // ★追加: クリックされたら、ふわっと消えるアニメーションを開始
+        // クリックされたら、ふわっと消えるアニメーションを開始
         if (currentMainSphere && currentMainSphere.userData.pinLayer) {
           currentMainSphere.userData.pinLayer.userData.isAnimatingOut = true;
           currentMainSphere.userData.pinLayer.userData.animProgress = 0;
